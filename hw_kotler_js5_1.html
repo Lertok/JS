@@ -1,0 +1,133 @@
+<!-- 1. Создать функцию, генерирующую шахматную доску. Можно использовать любые html-теги.
+Доска должна быть верно разлинована на черные и белые ячейки. Строки должны
+нумероваться числами от 1 до 8, столбцы — латинскими буквами A, B, C, D, E, F, G, H. -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>ex5__1</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container" id="cont">
+		<script>
+			let container = document.querySelector(".container");
+			container.style.background = "bisque";
+			container.style.width = "660px";
+			container.style.height = "660px";
+			container.style.paddingLeft = "60px";
+			container.style.paddingBottom = "60px";
+			container.style.margin = "0 auto";
+			container.style.display = "flex";
+			container.style.flexWrap = "wrap";
+
+			function my_initiation() {
+				let cell = document.createElement("div");
+				cell.className = "cell";
+				cont.append(cell);
+				cell.style.width = "60px";
+				cell.style.height = "60px";
+				cell.style.margin = "0px";
+				cell.style.padding = "0px";
+				cell.style.fontSize = "40px";
+				cell.style.fontWeight = "bold";
+				cell.style.textAlign = "center";
+
+			}
+			window.onload = my_initiation;
+
+			for (let n = 0; (n != 121); n++) {
+				window.onload = my_initiation();
+			};
+
+			let masCell = document.querySelectorAll(".cell");
+			for (let i = 0; (i < masCell.length); i++) {
+				let c;
+				if (i % 2 == 0) {
+					c = "black";
+				} else {
+					c = "white";
+				}
+				masCell[i].style.background = c;
+
+				for (let f = 89; (f < 108); f++) {
+					masCell[f].style.color = "bisque";
+				}
+				for (let f = 0; (f < 22); f++) {
+					masCell[f].style.background = "bisque";
+				}
+				for (let f = 110; (f < 121); f++) {
+					masCell[f].style.background = "bisque";
+				}
+
+				masCell[22].style.background = "bisque";
+				masCell[33].style.background = "bisque";
+				masCell[44].style.background = "bisque";
+				masCell[55].style.background = "bisque";
+				masCell[66].style.background = "bisque";
+				masCell[77].style.background = "bisque";
+				masCell[88].style.background = "bisque";
+				masCell[99].style.background = "bisque";
+				masCell[31].style.background = "bisque";
+				masCell[32].style.background = "bisque";
+				masCell[42].style.background = "bisque";
+				masCell[43].style.background = "bisque";
+				masCell[53].style.background = "bisque";
+				masCell[54].style.background = "bisque";
+				masCell[64].style.background = "bisque";
+				masCell[65].style.background = "bisque";
+				masCell[75].style.background = "bisque";
+				masCell[76].style.background = "bisque";
+				masCell[86].style.background = "bisque";
+				masCell[87].style.background = "bisque";
+				masCell[97].style.background = "bisque";
+				masCell[98].style.background = "bisque";
+				masCell[108].style.background = "bisque";
+				masCell[109].style.background = "bisque";
+
+				masCell[12].innerText = "A";
+				masCell[13].innerText = "B";
+				masCell[14].innerText = "C";
+				masCell[15].innerText = "D";
+				masCell[16].innerText = "E";
+				masCell[17].innerText = "F";
+				masCell[18].innerText = "G";
+				masCell[19].innerText = "H";
+				masCell[111].innerText = "A";
+				masCell[112].innerText = "B";
+				masCell[113].innerText = "C";
+				masCell[114].innerText = "D";
+				masCell[115].innerText = "E";
+				masCell[116].innerText = "F";
+				masCell[117].innerText = "G";
+				masCell[118].innerText = "H";
+
+				masCell[97].style.color = "black";
+				masCell[99].style.color = "black";
+
+				masCell[22].innerText = "1";
+				masCell[33].innerText = "2";
+				masCell[44].innerText = "3";
+				masCell[55].innerText = "4";
+				masCell[66].innerText = "5";
+				masCell[77].innerText = "6";
+				masCell[88].innerText = "7";
+				masCell[99].innerText = "8";
+				masCell[31].innerText = "1";
+				masCell[42].innerText = "2";
+				masCell[53].innerText = "3";
+				masCell[64].innerText = "4";
+				masCell[75].innerText = "5";
+				masCell[86].innerText = "6";
+				masCell[97].innerText = "7";
+				masCell[108].innerText = "8";
+			}
+
+		</script>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW7__Kotler</title>
+    <style>
+        #catalog {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        #cart {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .cat-item {
+            max-width: 800px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .cat-price {
+            flex-direction: column;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .cart-item {
+            max-width: 800px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="catalog"></div>
+    <hr />
+    <div id="cart"></div>
+    <button id="cart-show" class="cart-show__btn">Показать корзину</button>
+    <hr />
+    <div class="popup-cart">
+        <section class="cart-sec-id_0">
+            <h3>Состав корзины</h3>
+            <div class="cart-items"></div>
+        </section>
+        <section class="cart-sec-id_1">
+            <h3>Адрес доставки</h3>
+            <input type="text" name="address" id="cart-address" />
+        </section>
+        <section class="cart-sec-id_2">
+            <h3>Комментарий</h3>
+            <input type="text" name="comment" id="cart-comment" />
+        </section>
+        <button id="cart-next" class="cart-item__btn">next</button>
+    </div>
+    <script src="hw_kotler_js7.js"></script>
+</body>
+
+</html>
